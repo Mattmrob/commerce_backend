@@ -43,7 +43,7 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 
-  /* req.body should look like this...
+  /* STARTER CODE SOLUTION?
     {
       product_name: "Basketball",
       price: 200.00,
@@ -102,6 +102,7 @@ router.put('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 
+  //  STARTER CODE SOLUTION?
   // Product.update(req.body, {
   //   where: {
   //     id: req.params.id,
