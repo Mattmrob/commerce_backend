@@ -34,23 +34,14 @@ router.get('/:id', async (req, res) => {
 });
 
 // create new product
-router.post('/', (req, res) => {
-  Product.create(req.body)
-  .then(() => {
-    res.json(req.body)
-  })
-  // try {
-  //   const productData = await Product.bulkCreate(
-  //     {
-  //       product_name: 'Fun Shirt',
-  //       price: 14.99,
-  //       stock: 14,
-  //       category_id: 4,
-  //     });
-  //   res.status(200).json(productData);
-  // } catch (err) {
-  //   res.status(400).json(err);
-  // }
+router.post('/', async (req, res) => {
+
+  try {
+    const productData = await Product.create(req.body)
+    res.status(200).json(productData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 
   /* req.body should look like this...
     {
