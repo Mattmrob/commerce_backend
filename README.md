@@ -16,7 +16,9 @@ MYSQL_DATABASE=ecommerce_db
 
 Set these values equal to your MYSQL username, MYSQL password, and the database name, which the user should set to ecommerce_db. If you do not have mysql installed and have not created a username or password, do so, then put them into the .env file.
 
-Finally, the user needs to create the database, which can be done by navigating to the db folder, then selecting the schema.sql file. Log into your mysql account in a new terminal, then paste the code found in schema.sql into it.
+Now, the user needs to create the database, which can be done by navigating to the db folder, then selecting the schema.sql file. Log into your mysql account in a new terminal, then paste the code found in schema.sql into it.
+
+Then, to get your server running, run the "start" or "watch" command in the package.json file. You will need the server running to send requests or update the database.
 
 From here the user can begin adding their own data into the database, or run the command 'seed' found in the package.json file to populate an example database. If you wish to add your own custom data, please review the models folder and accompanying files as to the structure of your mysql additions.
 
